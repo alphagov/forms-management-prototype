@@ -1,0 +1,7 @@
+<ul>
+<% @forms.each do |form| %>
+<li>
+  <a href="<%= ENV['DESIGNER_URL'] %>app/designer/<%= form["Key"] %>"><%= form["DisplayName"] %></a>
+</li>
+<% end %>
+</ul>

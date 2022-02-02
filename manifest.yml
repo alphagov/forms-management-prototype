@@ -1,0 +1,12 @@
+---
+applications:
+- name: forms-management-user-based-access
+  memory: 256M
+  command: rake db:migrate && bin/rails server
+  buildpacks:
+    - ruby_buildpack
+  services:
+    - forms-management-user-based-access-db
+  env:
+    RAILS_ENV: production
+    RACK_ENV: production
