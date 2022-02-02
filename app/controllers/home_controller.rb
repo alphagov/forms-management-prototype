@@ -1,6 +1,5 @@
 require "jwt"
 require "httparty"
-require "pry"
 require "json"
 
 class HomeController < ApplicationController

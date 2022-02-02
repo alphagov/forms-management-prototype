@@ -16,9 +16,9 @@ gem "bootsnap", require: false
 gem "gds-sso"
 gem "jwt"
 gem "httparty"
+gem "dotenv-rails"
 
 group :development, :test do
-  gem "dotenv-rails"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "pry"
 end
