@@ -1,7 +1,14 @@
+<dl>
+  <dt>Email</dt>
+  <dd><%= @user.email %></dd>
+  <dt>Permissions</dt>
+  <dd><%= @user.permissions %></dd>
+</dl>
+
 <ul>
 <% @forms.each do |form| %>
 <li>
-  <a href="<%= ENV['DESIGNER_URL'] %>app/designer/<%= form["Key"] %>"><%= form["DisplayName"] %></a>
+  <a href="<%= ENV['DESIGNER_URL'] %>app/designer/<%= form["Key"] %>?token=<%= @token %>"><%= form["DisplayName"] %></a>
 </li>
 <% end %>
 </ul>

@@ -4,13 +4,14 @@ require "json"
 
 class HomeController < ApplicationController
   def index
-    payload = { user: "temporary" }
-    token = JWT.encode payload, nil, 'none'
+    @user = current_user
+    payload = { user: current_user.email }
+    @token = JWT.encode payload, nil, 'none'
 
     forms_response = HTTParty.get(
       "#{ENV['FORMS_API_URL']}published",
       headers: {
-        "X_API_KEY" => token
+        "X_API_KEY" => @token
       }
     )
 
