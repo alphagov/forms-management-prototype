@@ -1,6 +1,6 @@
 ---
 applications:
-- name: forms-management-user-based-access
+- name: forms-management-cola-user-based-access
   memory: 256M
   command: rake db:migrate && bin/rails server
   buildpacks:
